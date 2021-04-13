@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_label">Hello World</string>
+    <string name="name_date">Mohamed, Mona 4/13/2021</string>
+
+</resources>
