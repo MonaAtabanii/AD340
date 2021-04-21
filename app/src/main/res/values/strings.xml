@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SignUpForm</string>
+    <string name="fullName">Full Name</string>
+    <string name="fullname">Enter your full name</string>
+    <string name="userName">User Name</string>
+    <string name="username">Enter a user name</string>
+    <string name="userEmail">Email</string>
+    <string name="useremail">Enter valid Email</string>
+    <string name="userPassword">Password</string>
+    <string name="userpassword">Enter valid password</string>
+    <string name="dob">Birth Date</string>
+    <string name="user_dob">Enter your date of birth</string>
+    <string name="register">Submit</string>
+    <string name="name_date">Mohamed, Mona 4/18/2021</string>
+
+    <string name="back">Back</string>
+    <string name="thanks_registered">Thanks for Signing Up </string>
+
+
+
+
+
+
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>
