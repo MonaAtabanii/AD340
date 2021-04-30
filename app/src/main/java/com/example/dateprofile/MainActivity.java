@@ -11,17 +11,23 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText fullname, username, useremail, userbio, useroccupation;
-    ImageView userimage;
+    String userbofd;
+    //ImageView userimage;
     Button register;
     DatePicker dofb;
+    Calendar calendar = Calendar.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,43 +39,69 @@ public class MainActivity extends AppCompatActivity {
         useremail = findViewById(R.id.useremail);
         userbio = findViewById(R.id.userbio);
         useroccupation = findViewById(R.id.useroccupation);
-        userimage = findViewById(R.id.userimage);
+        //userimage = findViewById(R.id.userimage);
         register = findViewById(R.id.register);
-        Calendar calendar = Calendar.getInstance();
 
         dofb = findViewById(R.id.birthDate);
         dofb.setMaxDate(new Date().getTime());
 
-        register.setOnClickListener( new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View register) {
-                if (dataValidation()) {
-                    int year = dofb.getYear();
-                    int month = dofb.getMonth() + 1;
-                    int day = dofb.getDayOfMonth();
-
-                    if (year <= 2003) {
-                        if (month <= calendar.get(Calendar.MONTH + 1)) {
-                            if (day <= calendar.get(Calendar.DAY_OF_MONTH)) {
-                                Intent intent = new Intent(MainActivity.this, DatingProfile.class);
-                                Bundle bundle = new Bundle();
-                            }
-                        }
-                    }
+            public void onClick(View v) {
+                if (dataValidation() ){
+                    Intent intent = new Intent(MainActivity.this, DatingProfile.class);
+                    Bundle b = new Bundle();
+                    b.putString(Constants.KEY_FNAME, fullname.getText().toString());
+                    b.putString(Constants.KEY_UNAME, username.getText().toString());
+                    b.putString(Constants.KEY_UAGE, userbofd);
+                    b.putString(Constants.KEY_UBIO, userbio.getText().toString());
+                    b.putString(Constants.KEY_UEMAIL, useremail.getText().toString());
+                    b.putString(Constants.KEY_UOCCUPATION, useroccupation.getText().toString());
+                    intent.putExtras(b);
+                    startActivity(intent);
                 }
             }
         });
     }
 
+    /*public void onRegister(View view) {
+        fullname = findViewById(R.id.fullname);
+        username = findViewById(R.id.username);
+        useremail = findViewById(R.id.useremail);
+        userbio = findViewById(R.id.userbio);
+        useroccupation = findViewById(R.id.useroccupation);
+        if (dataValidation() ){
+            Intent intent = new Intent(MainActivity.this, DatingProfile.class);
+            Bundle b = new Bundle();
+            b.putString(Constants.KEY_FNAME, fullname.getText().toString());
+            b.putString(Constants.KEY_UNAME, username.getText().toString());
+            b.putString(Constants.KEY_UBIO, userbio.getText().toString());
+            b.putString(Constants.KEY_UEMAIL, useremail.getText().toString());
+            b.putString(Constants.KEY_UOCCUPATION, useroccupation.getText().toString());
+            intent.putExtras(b);
+            startActivity(intent);
+        }
+    }*/
 
-    boolean validEmail(EditText text) {
-        CharSequence email = text.getText().toString();
+    boolean validEmail(String text) {
+        CharSequence email = text;
         return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
 
     boolean isEmpty(EditText text) {
         CharSequence str = text.getText().toString();
         return TextUtils.isEmpty(str);
+    }
+
+    boolean validDOB(DatePicker dofb){
+        int year = dofb.getYear();
+        int month = dofb.getMonth() + 1;
+        int day = dofb.getDayOfMonth();
+        LocalDate dob = LocalDate.of(year, month, day);
+        LocalDate today = LocalDate.now();
+        Period age = Period.between(dob, today);
+        userbofd = age.getYears() + " years old";
+        return ((year<=2003) && (month<= calendar.get(Calendar.MONTH + 1)) && (day <= calendar.get(Calendar.DAY_OF_MONTH)));
     }
 
     boolean dataValidation() {
@@ -80,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             fullname.setError("Full name is required");
             t.show();
         }
-        else if (validEmail(useremail) == false) {
+        else if (validEmail(useremail.getText().toString()) == false) {
             check = false;
             Toast t = Toast.makeText(this, "Enter user email", Toast.LENGTH_SHORT);
             useremail.setError("Enter valid email!");
@@ -104,8 +136,14 @@ public class MainActivity extends AppCompatActivity {
             useroccupation.setError("Occupation is required");
             t.show();
         }
+        else if (!validDOB(dofb)) {
+            check = false;
+            Toast t = Toast.makeText(this, "18 years old or older", Toast.LENGTH_SHORT);
+            t.show();
+        }
         return check;
     }
+
 
 
 }
