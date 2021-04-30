@@ -6,23 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ThanksRegistered">
 
+
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/thanks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/thanks_registered"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/thanks"
+        app:layout_constraintVertical_bias="0.374"
+        android:onClick="goBack" />
 </androidx.constraintlayout.widget.ConstraintLayout>
