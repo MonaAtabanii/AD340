@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }*/
 
-    boolean validEmail(String text) {
+    static boolean validEmail(String text) {
         CharSequence email = text;
         return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
