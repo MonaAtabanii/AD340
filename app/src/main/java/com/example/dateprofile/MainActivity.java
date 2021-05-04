@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         LocalDate today = LocalDate.now();
         Period age = Period.between(dob, today);
         userbofd = age.getYears() + " years old";
-        return ((year<=2003) && (month<= calendar.get(Calendar.MONTH + 1)) && (day <= calendar.get(Calendar.DAY_OF_MONTH)));
+        return ((year<=today.getYear()-18) && (month<= today.getMonthValue()) && (day <= today.getDayOfMonth()));
     }
 
     boolean dataValidation() {

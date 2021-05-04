@@ -37,7 +37,7 @@ public class MainActivityTest {
         onView(withId(R.id.username)).perform(typeText("User Name"));
         onView(withId(R.id.userbio)).perform(typeText("User BIO"));
         onView(withId(R.id.useroccupation)).perform(typeText("User Occupation"));
-        
+
         onView(withId(R.id.fullname)).check(matches(withText("Full Name")));
         onView(withId(R.id.useremail)).check(matches(withText("userEmail@test.com")));
         onView(withId(R.id.username)).check(matches(withText("User Name")));
