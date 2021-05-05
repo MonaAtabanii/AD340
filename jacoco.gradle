@@ -26,11 +26,11 @@ def excludes = [
         '**/models/**'
 ]
 def javaClasses = fileTree(
-        dir      : 'build/intermediates/javac/debug/classes/com.example',
+        dir      : 'build/intermediates/javac/debug/classes/com/example',
         excludes : excludes
 )
 def kotlinClasses = fileTree(
-        dir      : 'build/tmp/kotlin-classes/debug/com.example',
+        dir      : 'build/tmp/kotlin-classes/debug/com/example',
         excludes : excludes
 )
 tasks.withType(Test) {
