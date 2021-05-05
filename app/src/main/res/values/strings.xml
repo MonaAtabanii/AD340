@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">DateProfile</string>
+    <string name="fullName">Full Name</string>
+    <string name="fullname">Enter your full name</string>
+    <string name="userName">User Name</string>
+    <string name="username">Enter a user name</string>
+    <string name="userEmail">Email</string>
+    <string name="useremail">Enter valid Email</string>
+    <string name="userBio">Bio</string>
+    <string name="userbio">Enter valid Bio</string>
+    <string name="userOccupation">Occupation</string>
+    <string name="useroccupation">Enter valid Occupation</string>
+    <string name="dob">Birth Date</string>
+    <string name="user_dob">Enter your date of birth</string>
+    <string name="userImage">User Picture</string>
+    <string name="register">Submit</string>
+    <string name="name_date">Mohamed, Mona 4/23/2021</string>
+
+    <string name="back">Back</string>
+    <string name="thanks_registered">Thanks for Signing Up </string>
+    <string name="regForm">SignUp Form</string>
+    <string name="thanksRegistered">Thanks</string>
+
+
+    <string name="action_settings">Settings</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting_fragment">Settings fragment</string>
+
+    <string name="matches_fragment">Matches fragment</string>
+
+</resources>

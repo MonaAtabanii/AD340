@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30px"
+        tools:context=".MainActivity"
+        android:shrinkColumns="1"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <ImageView
+                android:id="@+id/userimage"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:spinnersShown="true"
+                android:gravity="center"
+                android:src="@drawable/cat" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:hint="Full Name"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:hint="User Email"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/userName"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:hint="User Name"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/user_dob"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:inputType="date"
+                android:hint="Birth Date"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/userOccupation"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:hint="Occupation"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/userBio"
+                android:layout_column="1"
+                android:layout_span="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:hint="BIO" />
+        </TableRow>
+
+        <TableRow android:layout_marginTop="5dp">
+            <Button
+                android:id="@+id/back"
+                android:layout_span="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/back"
+                android:onClick="onBack"
+                android:layout_gravity="center_horizontal"/>
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>
