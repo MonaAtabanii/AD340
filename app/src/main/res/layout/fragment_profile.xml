@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30px"
-        tools:context=".MainActivity"
+        tools:context=".Profile"
         android:shrinkColumns="1"
         android:stretchColumns="1">
 

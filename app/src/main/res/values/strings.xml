@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DateProfile</string>
+    <string name="app_name">DatingProfileW4</string>
     <string name="fullName">Full Name</string>
     <string name="fullname">Enter your full name</string>
     <string name="userName">User Name</string>
@@ -20,6 +20,11 @@
     <string name="thanks_registered">Thanks for Signing Up </string>
     <string name="regForm">SignUp Form</string>
     <string name="thanksRegistered">Thanks</string>
+    <string name="settingsTab">Settings</string>
+    <string name="matchessTab">Matchess</string>
+    <string name="profileTab">Profile</string>
+
+
 
 
     <string name="action_settings">Settings</string>

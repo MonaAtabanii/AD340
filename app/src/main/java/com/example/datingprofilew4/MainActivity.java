@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (dataValidation() ){
-                    Intent intent = new Intent(MainActivity.this, SettingsFragment.class);
+                    Intent intent = new Intent(MainActivity.this, ContainerActivity.class);
                     Bundle b = new Bundle();
                     b.putString(Constants.KEY_FNAME, fullname.getText().toString());
                     b.putString(Constants.KEY_UNAME, username.getText().toString());
