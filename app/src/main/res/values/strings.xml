@@ -45,5 +45,7 @@
     <string name="setting_fragment">Settings fragment</string>
 
     <string name="matches_fragment">Matches fragment</string>
+    <string name="matches_name">Name</string>
+    <string name="matches_bio">Matches BIO</string>
 
 </resources>

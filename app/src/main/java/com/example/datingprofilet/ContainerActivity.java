@@ -79,7 +79,9 @@ public class ContainerActivity extends AppCompatActivity {
 
             }
         });
-
+        tablayout.getTabAt(0).setIcon(R.drawable.ic_profile);
+        tablayout.getTabAt(1).setIcon(R.drawable.ic_matches);
+        tablayout.getTabAt(2).setIcon(R.drawable.ic_settings);
         viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tablayout));
     }
 
