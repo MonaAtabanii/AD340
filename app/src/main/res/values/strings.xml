@@ -21,9 +21,33 @@
     <string name="regForm">SignUp Form</string>
     <string name="thanksRegistered">Thanks</string>
 
-
-
+    <string name="settingsTab">Settings</string>
+    <string name="matchesTab">Matches</string>
+    <string name="profileTab">Profile</string>
 
 
     <string name="action_settings">Settings</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting_fragment">Settings fragment</string>
+
+    <string name="matches_fragment">Matches fragment</string>
+    <string name="matches_name">Name</string>
+    <string name="matches_bio">Matches BIO</string>
+
+
 </resources>

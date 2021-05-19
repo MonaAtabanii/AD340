@@ -1,6 +1,7 @@
 package com.example.dateprofile;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     Button register;
     DatePicker dofb;
     Calendar calendar = Calendar.getInstance();
+    private FragmentManager manager;
+
 
 
     @Override
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        manager = getSupportFragmentManager();
         fullname = findViewById(R.id.fullname);
         username = findViewById(R.id.username);
         useremail = findViewById(R.id.useremail);
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (dataValidation() ){
-                    Intent intent = new Intent(MainActivity.this, DatingProfile.class);
+                    Intent intent = new Intent(MainActivity.this, ContainerActivity.class);
                     Bundle b = new Bundle();
                     b.putString(Constants.KEY_FNAME, fullname.getText().toString());
                     b.putString(Constants.KEY_UNAME, username.getText().toString());
